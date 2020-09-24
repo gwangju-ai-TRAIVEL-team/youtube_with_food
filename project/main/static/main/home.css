@@ -32,6 +32,7 @@ button{background-color:white; border:none;}
     font-weight: 900;
     color :white;
     padding : 20px 30px;
+    top: 20px;
 }
 
 footer {width: 960px; margin-top: 48px; margin-bottom: 16px; margin-left: auto; margin-right: auto;}

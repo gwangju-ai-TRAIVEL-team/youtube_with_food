@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import youtube
 import random
+import joblib
 # Create your views here.
+
 
 def List(request) :
     video = youtube.objects.all()
@@ -19,6 +21,7 @@ def List(request) :
 
         context["food"] = food
         
+    
     
 
     return render(request, 'main/list.html', context)

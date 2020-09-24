@@ -151,4 +151,13 @@ $(function() {
             $("#input14").val("");
         }
     })
+
+    $("#food15").click(function() {
+        if ($(this).hasClass("clicked")) {
+            $("#input15").val($(this).text());
+        }
+        else {
+            $("#input15").val("");
+        }
+    })
 })
