@@ -11,17 +11,18 @@
 <body>
     <header>
     <div class="headercontainer">
-            <a href="{% url 'home' %}" id="font1">Youtube with Food</a>
+            <a href="{% url 'home' %}" id="font1">Youtube with Food </a>
     </div>
     </header>
 
-
+    
     <section id="content">
         <ul>
             <li class="listli">
                 <div class="list">
                     <a href="{% url 'main:video' video.0.id %}"><img src=" {{ video.0.thumbnail_link}} " class="img"></a>
                     <div class="info">
+                        <p>{{ food.0 }}</p>
                         <a class="title" href="{% url 'main:video' video.0.id %}"> {{ video.0.title }}</a>
                         <p class="like"> 좋아요: {{ video.0.likes }}  싫어요: {{ video.0.dislikes}} </p>
                     </div>

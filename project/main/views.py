@@ -11,6 +11,16 @@ def List(request) :
         'video': randomvideo
     }
 
+    if request.method == "GET" :
+        food = request.GET.getlist('food')
+        while ("" in food) :
+            food.remove("")
+            print("success")
+
+        context["food"] = food
+        
+    
+
     return render(request, 'main/list.html', context)
 
 def video(request, video_id) :
