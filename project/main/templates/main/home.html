@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/home.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'main/home.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="headercontainer">
+            <a href="{% url 'home' %}" id="font1">Youtube with Food</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="mcontainer">
+        <button type="button" class="arrow" id="arrow_left"><img src="{% static 'main/images/btn1.png' %}" width="45"></button>
+            <div class="foodcontainer">
+                <div id="food_1">
+                    <button id="food1" class="food food1" value="food1">음식1</button>
+                    <button id="food2" class="food food1" value="food2">음식2</button>
+                    <button id="food3" class="food food1" value="food3">음식3</button>
+                    <button id="food4" class="food food1" value="food4">음식4</button>
+                    <button id="food5" class="food food1" value="food5">음식5</button>
+                    <button id="food6" class="food food1" value="food6">음식6</button>
+                    <button id="food7" class="food food1" value="food7">음식7</button>
+                </div>
+                <div id="food_2">
+                    <button id="food8" class="food food2" value="food8">음식8</button>
+                    <button id="food9" class="food food2" value="food9">음식9</button>
+                    <button id="food10" class="food food2" value="food10">음식10</button>
+                    <button id="food11" class="food food2" value="food11">음식11</button>
+                    <button id="food12" class="food food2" value="food12">음식12</button>
+                    <button id="food13" class="food food2" value="food13">음식13</button>
+                    <button id="food14" class="food food2" value="food14">음식14</button>
+                </div>
+            </div>
+            <button type="button" class="arrow" id="arrow_right"><img src="{% static 'main/images/btn2.png' %}" width="45" ></button>
+        </div>
+
+        <form method="GET" action="{% url 'main:List' %}">
+            <input type="hidden" value="" id="input1" name="food">
+            <input type="hidden" value="" id="input2" name="food">
+            <input type="hidden" value="" id="input3" name="food">
+            <input type="hidden" value="" id="input4" name="food">
+            <input type="hidden" value="" id="input5" name="food">
+            <input type="hidden" value="" id="input6" name="food">
+            <input type="hidden" value="" id="input7" name="food">
+            <input type="hidden" value="" id="input8" name="food">
+            <input type="hidden" value="" id="input9" name="food">
+            <input type="hidden" value="" id="input10" name="food">
+            <input type="hidden" value="" id="input11" name="food">
+            <input type="hidden" value="" id="input12" name="food">
+            <input type="hidden" value="" id="input13" name="food">
+            <input type="hidden" value="" id="input14" name="food">
+            <div class="btnbox">
+                <button id="btn"type="submit">영상추천하기</button>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        <div id="footcontainer">
+            <p>광주 인공지능 사관학교 해커톤</p>
+        </div>
+    </footer>
+
+</body>
+</html>

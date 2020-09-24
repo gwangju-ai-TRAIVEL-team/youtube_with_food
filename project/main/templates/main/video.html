@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/video.css' %}">
+</head>
+<body>
+    <header>
+    <div class="headercontainer">
+            <a href="{% url 'home' %}" id="font1">Youtube with Food</a>
+    </div>
+    </header>
+
+
+    <section>
+        <div id="videobox">
+            <p id="title"> {{ video.0.title }}</p>
+            <object style="height: 450px; width: 800px" id="video">
+                <param name="movie" value="http://www.youtube.com/v/{{ video.0.video_id }}" + {{ video.0.video_id }}>
+                <param name="allowFullScreen" value="true">
+                <param name="allowScriptAccess" value="always">
+                 <embed src="http://www.youtube.com/v/{{ video.0.video_id }}"  type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="390">
+            </object>
+            <div id="info">
+                <p class="view"> Views {{ video.0.view_count }}  </p>
+                <p class="like"> Likes {{ video.0.likes }}  Dislikes {{ video.0.dislikes }} </p>
+                <p class="time"> {{ video.0.publishedAt }} </p>
+                <br>
+                <br>
+                <p class="description"> {{ video.0.description }} </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="footcontainer">
+            <p>광주 인공지능 사관학교 해커톤</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

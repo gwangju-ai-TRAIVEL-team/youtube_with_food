@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/list.css' %}">
+</head>
+<body>
+    <header>
+    <div class="headercontainer">
+            <a href="{% url 'home' %}" id="font1">Youtube with Food</a>
+    </div>
+    </header>
+
+
+    <section id="content">
+        <ul>
+            <li class="listli">
+                <div class="list">
+                    <a href="{% url 'main:video' video.0.id %}"><img src=" {{ video.0.thumbnail_link}} " class="img"></a>
+                    <div class="info">
+                        <a class="title" href="{% url 'main:video' video.0.id %}"> {{ video.0.title }}</a>
+                        <p class="like"> 좋아요: {{ video.0.likes }}  싫어요: {{ video.0.dislikes}} </p>
+                    </div>
+                </div>
+            </li>
+            <li class="listli">
+                <div class="list">
+                    <a href="{% url 'main:video' video.1.id %}"><img src=" {{ video.1.thumbnail_link}} " class="img"></a>
+                    <div class="info">
+                        <a class="title" href="{% url 'main:video' video.1.id %}"> {{ video.1.title }}</a>
+                        <p class="like"> 좋아요: {{ video.1.likes }}  싫어요: {{ video.1.dislikes}} </p>
+                    </div>
+                </div>
+            </li>
+            <li class="listli">
+                <div class="list">
+                    <a href="{% url 'main:video' video.2.id %}"><img src=" {{ video.2.thumbnail_link}} " class="img"></a>
+                    <div class="info">
+                        <a class="title" href="{% url 'main:video' video.2.id %}"> {{ video.2.title }}</a>
+                        <p class="like"> 좋아요: {{ video.2.likes }}  싫어요: {{ video.2.dislikes}} </p>
+                    </div>
+                </div>
+            </li>
+            <li class="listli">
+                <div class="list">
+                    <a href="{% url 'main:video' video.3.id %}"><img src=" {{ video.3.thumbnail_link}} " class="img"></a>
+                    <div class="info">
+                        <a class="title" href="{% url 'main:video' video.3.id %}"> {{ video.3.title }}</a>
+                        <p class="like"> 좋아요: {{ video.3.likes }}  싫어요: {{ video.3.dislikes}} </p>
+                    </div>
+                </div>
+            </li>
+            <li class="listli">
+                <div class="list">
+                    <a href="{% url 'main:video' video.4.id %}"><img src=" {{ video.4.thumbnail_link}} " class="img"></a>
+                    <div class="info">
+                        <a class="title" href="{% url 'main:video' video.4.id %}"> {{ video.4.title }}</a>
+                        <p class="like"> 좋아요: {{ video.4.likes }}  싫어요: {{ video.4.dislikes}} </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <div id="footcontainer">
+            <p>광주 인공지능 사관학교 해커톤</p>
+        </div>
+    </footer>
+
+</body>
+</html>
